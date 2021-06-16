@@ -1,0 +1,15 @@
+:root {
+	--primary-background-color: #f8f9fa;
+	--secondary-background-color: #ffffff;
+	--primary-button-background: #90f9ad;
+	--secondary-button-background: #343a40;
+	--disabled-background: #F8F9FA;
+	--cancel-button-background: #f8f9fa;
+	--primary-text-color: #343A40; /*#5C6165, #343A40*/
+	--secondary-text-color: #c7cacd;
+	--cancel-text-color: #656F77;
+	--primary-box-shadow-button: 2px 3px 5px rgba(144, 249, 173, 0.35), -2px -2px 5px rgba(144, 249, 173, 0.35);
+	--secondary-box-shadow-button: 2px 3px 5px rgba(52, 58, 64, 0.12), -2px -2px 5px rgba(52, 58, 64, 0.20);
+	--button-border-radius: 10px;
+	--block-border-radius: 12px;
+}
