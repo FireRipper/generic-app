@@ -1,0 +1,102 @@
+@import "../shared/_variables.css";
+
+.terms {
+	margin-top: 56px;
+	position: relative;
+	width: 480px;
+	padding: 45px;
+	background: var(--secondary-background-color);
+	overflow: hidden;
+	height: 601px;
+	border-radius: var(--block-border-radius);
+	box-shadow: 0 3px 15px rgba(0, 0, 0, .05);
+}
+
+.terms-close__icon {
+	position: absolute;
+	right: 20px;
+	top: 22px;
+	cursor: pointer;
+}
+
+.terms-title {
+	font-family: "Poppins-bold", serif;
+	font-size: 32px;
+	color: var(--primary-text-color);
+	margin-top: 17px;
+}
+
+.terms-subtitle {
+	color: #D2D5D8;
+	font-size: 12px;
+	margin-top: 16px;
+	height: 50px;
+	width: 310px;
+	line-height: 1.8;
+}
+
+.terms-text {
+	max-height: 270px;
+	overflow-y: auto;
+	padding-right: 10px;
+	margin-top: 40px;
+	margin-bottom: 37px;
+	font-size: 13px;
+	color: var(--primary-text-color);
+	line-height: 1.5;
+	position: relative;
+}
+
+.terms-loader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 250px;
+	width: 100%;
+}
+
+::-webkit-scrollbar {
+	width: 2px;
+}
+
+::-webkit-scrollbar-track {
+	background: #F9FAFB;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--primary-button-background);
+	border-radius: 10px;
+}
+
+.button-agree {
+	display: flex;
+	padding: 17px 20px;
+	background: var(--primary-button-background);
+	box-shadow: var(--primary-box-shadow-button);
+	border-radius: var(--button-border-radius);
+	max-width: 120px;
+	cursor: pointer;
+	transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
+}
+
+.button-agree[disabled] .button__title {
+	color: #fff;
+}
+
+.button-agree[disabled] .button__icon svg path {
+	fill: #fff;
+}
+
+.button-agree:hover {
+	opacity: 0.7;
+}
+
+.button-agree .button__title {
+	font-weight: bold;
+	color: var(--primary-text-color);
+}
+
+.button-agree .button__icon {
+	padding: 0 8px 0 0;
+}
