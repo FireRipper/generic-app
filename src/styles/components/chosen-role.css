@@ -1,0 +1,110 @@
+@import "../shared/_variables.css";
+
+.chosen-role, .chosen-role-subtitle,
+.chosen-role-buttons, .chosen-role-box {
+	display: flex;
+}
+
+.chosen-role {
+	box-shadow: 0 0 12px rgba(93, 90, 90, .1), 0 0 12px rgba(93, 90, 90, 0.1);
+	background: var(--secondary-background-color);
+	flex-direction: column;
+	padding: 45px;
+	border-radius: var(--block-border-radius);
+	margin-top: 58px;
+	min-width: 480px;
+	height: 280px;
+}
+
+.chosen-role-box {
+	margin-top: 13px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.chosen-role-title {
+	font-size: 32px;
+	font-family: 'Poppins-bold', serif;
+	color: var(--primary-text-color);
+}
+
+.chosen-role-icon svg {
+	width: 32px;
+	height: 32px;
+}
+
+.chosen-role-icon svg path {
+	fill: var(--cancel-button-background);
+}
+
+.chosen-role-subtitle {
+	flex-grow: 1;
+	margin-top: 20px;
+	font-size: 12px;
+	padding-left: 0;
+	color: var(--secondary-text-color);
+}
+
+.chosen-role-span {
+	color: var(--primary-text-color);
+}
+
+.chosen-role-buttons {
+	justify-content: space-between;
+}
+
+.chosen-role__button {
+	background: var(--primary-button-background);
+	border-radius: var(--button-border-radius);
+	color: var(--primary-text-color);
+	box-shadow: var(--primary-box-shadow-button);
+	transition: box-shadow 0.5s cubic-bezier(.25, .8, .25, 1);
+	display: flex;
+	padding: 14px;
+	align-items: center;
+	cursor: pointer;
+}
+
+.chosen-role__button .button__icon {
+	padding: 0 7px 0 5px;
+}
+
+.chosen-role__button .button__title {
+	font-weight: bold;
+	padding-right: 8px;
+}
+
+.chosen-role__cancel {
+	background: var(--cancel-button-background);
+	border-radius: var(--button-border-radius);
+	color: var(--cancel-text-color);
+	box-shadow: 2px 3px 5px rgba(248, 249, 250, 0.12), -2px -2px 5px rgba(248, 249, 250, 0.20);
+	transition: box-shadow 0.5s cubic-bezier(.25, .8, .25, 1);
+	display: flex;
+	padding: 15px;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.chosen-role__cancel:hover {
+	box-shadow: 2px 4px 10px rgba(253, 249, 249, 0.24), -2px -2px 7px rgba(183, 185, 186, 0.24);
+}
+
+.chosen-role__cancel .button__icon {
+	padding: 0 7px 4px 8px;
+}
+
+.chosen-role__cancel .button__icon svg {
+	width: 7px;
+	height: 7px;
+}
+
+.chosen-role__cancel .button__icon svg path {
+	fill: var(--cancel-text-color);
+}
+
+.chosen-role__cancel .button__title {
+	font-size: 16px;
+	padding: 0 8px 0 2px;
+}
