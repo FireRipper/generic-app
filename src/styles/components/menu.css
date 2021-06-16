@@ -1,0 +1,45 @@
+@import "../shared/_variables.css";
+
+.menu {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+}
+
+.menu-list {
+	display: flex;
+	margin-left: 60px;
+	align-items: center;
+}
+
+.menu__item {
+	padding: 0 20px;
+	text-align: center;
+}
+
+.menu__link {
+	color: var(--primary-text-color);
+	font-size: 14px;
+	font-weight: bold;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+}
+
+.menu__link:hover  {
+	color: var(--primary-button-background);
+}
+
+.menu__icon {
+	padding-left: 4px;
+	margin-top: 4px;
+}
+
+.menu__icon svg {
+	width: 15px;
+	height: 15px;
+	fill: var(--primary-button-background);
+}
+
+

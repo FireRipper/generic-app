@@ -1,0 +1,10 @@
+@import "../shared/_variables.css";
+
+.button:disabled,
+.button[disabled] {
+	background: var(--disabled-background);
+	cursor: not-allowed;
+	pointer-events: none;
+	box-shadow: none;
+}
+
