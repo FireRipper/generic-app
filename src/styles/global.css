@@ -12,6 +12,7 @@
 @import "./components/guide.css";
 @import "./components/terms-and-conditions.css";
 @import "./components/loader.css";
+@import "./components/mobile-menu.css";
 
 * {
   box-sizing: border-box;
@@ -59,8 +60,7 @@ a {
 }
 
 html, body, #root {
-  height: 100%;
-  width: 100%;
+  background: var(--primary-background-color);
   font-family: Poppins, serif;
 }
 
@@ -68,7 +68,4 @@ img {
   height: 100%;
 }
 
-#root {
-  background: var(--primary-background-color);
-}
 

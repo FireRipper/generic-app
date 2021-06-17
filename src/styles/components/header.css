@@ -12,6 +12,7 @@
 
 .header {
 	width: 100%;
+	position: relative;
 	justify-content: space-between;
 }
 
@@ -21,6 +22,62 @@
 	flex: 0 0 27%;
 	justify-content: flex-end;
 	margin-left: 17px;
+}
+
+.header-btn {
+	display: none;
+	position: relative;
+	width: 50px;
+	background-color: var(--primary-button-background);
+	height: 50px;
+	box-shadow: var(--primary-box-shadow-button);
+	border-radius: var(--button-border-radius);
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.header-btn__burger svg, .header-btn__close svg path {
+	fill: var(--secondary-button-background);
+}
+
+.header-btn__burger, .header-btn__close {
+	position: absolute;
+}
+
+.header-btn__burger {
+	top: 9px;
+	left: 9px;
+}
+
+.header-btn__close {
+	top: 15px;
+	left: 15px;
+}
+
+.header-btn__close svg {
+	width: 20px;
+	height: 20px;
+}
+
+.header-btn__burger svg {
+	width: 32px;
+	height: 32px;
+}
+
+.header-btn .header-btn__close,
+.header-btn.open .header-btn__burger {
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(0);
+	transition: all .4s ease-in-out;
+}
+
+.header-btn.open .header-btn__close,
+.header-btn .header-btn__burger {
+	opacity: 1;
+	transition: all .4s ease-in-out;
+	visibility: visible;
+	transform: scale(1);
 }
 
 .button-sign-in, .button-sign-up {
@@ -45,16 +102,16 @@
 	box-shadow: var(--primary-box-shadow-button)
 }
 
-.button-sign-in .button__icon {
-	padding: 3px 8px 0 0;
-}
-
-.button-sign-in .button__title {
+.button-sign-in .button__link {
 	color: var(--primary-button-background);
 	font-weight: bold;
 }
 
-.button-sign-up .button__title {
+.button-sign-in .button__icon {
+	padding: 3px 8px 0 0;
+}
+
+.button-sign-up .button__link {
 	color: var(--primary-text-color);
 	font-weight: bold;
 }
@@ -63,3 +120,59 @@
 	padding: 3px 8px 0 0;
 }
 
+@media screen and (max-width: 1440px) {
+	.header-login {
+		flex: 0 0 25%;
+	}
+
+	.header-logo {
+		flex: 0 0 25%;
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.header-login {
+		flex: 0 0 28%;
+	}
+
+	.header-logo {
+		flex: 0 0 28%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.header-login {
+		flex: 0 0 25%;
+	}
+
+	.header-logo {
+		flex: 0 0 25%;
+	}
+
+	.button-sign-in, .button-sign-up {
+		padding: 0 15px;
+	}
+
+	.button-sign-up {
+		margin-left: 15px;
+	}
+
+	.button-sign-in .button__title, .button-sign-up .button__title {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.header-login {
+		display: none;
+	}
+
+	.header-logo {
+		margin-left: 20px;
+	}
+
+	.header-btn {
+		display: flex;
+	}
+}

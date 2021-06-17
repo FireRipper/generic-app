@@ -41,3 +41,21 @@
 	max-width: 200px;
 	align-items: center;
 }
+
+@media screen and (max-width: 568px) {
+	.guide {
+		width: 100%;
+		flex-direction: column-reverse;
+	}
+
+	.button-guide {
+		justify-content: center;
+	}
+
+	.guide-info {
+		text-align: center;
+		max-width: 100%;
+		margin-bottom: 15px;
+	}
+}
+

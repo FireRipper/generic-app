@@ -41,12 +41,16 @@ const TermsAndConditions = ({ text, onClose }) => {
       <div className="terms-subtitle">
         You should obliged to apply the Terms & Conditions to use the service.
       </div>
-      <div className="terms-text" ref={refTerms}  onScroll={scrollFunc ? onScroll : null}>
-        {!text && loading && <div className="terms-loader"><Loader /></div>}
-        {error && 'Error receiving data from API'}
-        {text && <p dangerouslySetInnerHTML={{ __html: text }} />}
+      <div className="terms-text">
+        <div className={`terms-text__overlay ${!isReading ? 'active' : ''}`}>
+          <div className="terms-text-content" ref={refTerms} onScroll={scrollFunc ? onScroll : null}>
+            {!text && loading && <div className="terms-loader"><Loader /></div>}
+            {error && 'Error receiving data from API'}
+            {text && <p dangerouslySetInnerHTML={{ __html: text }} />}
+          </div>
+        </div>
       </div>
-      <Button nameIcon="checkmark" title="I Agree" clsName="button-agree" disabled={!isReading} func={onClose}/>
+      <Button nameIcon="checkmark" title="I Agree" clsName="button-agree" disabled={!isReading} func={onClose} />
     </div>
   )
 }

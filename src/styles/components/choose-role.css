@@ -83,3 +83,28 @@
 	font-weight: bold;
 	padding-right: 15px;
 }
+
+
+@media screen and (max-width: 568px) {
+	.choose-role {
+		width: 100%;
+		height: 100%;
+	}
+
+	.choose-role-title {
+		font-size: 28px;
+	}
+
+	.choose-role-buttons {
+		flex-direction: column;
+		margin-top: 70px;
+	}
+
+	.choose-role__borrower {
+		margin-bottom: 15px;
+	}
+
+	.choose-role__borrower, .choose-role__lender {
+		justify-content: center;
+	}
+}

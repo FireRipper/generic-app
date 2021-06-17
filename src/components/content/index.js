@@ -73,7 +73,10 @@ const Content = () => {
   return (
     <div className="content-wrapper">
       {
-        element === 'choose' && <ChooseRole funcChoose={chooseRole} element={element}/>
+        element === 'choose'
+        && <CSSTransition in={true} timeout={500} classNames="choose-role-transition" unmountOnExit>
+              <ChooseRole funcChoose={chooseRole} element={element} />
+        </CSSTransition>
       }
       {
         element === 'chosen' &&
